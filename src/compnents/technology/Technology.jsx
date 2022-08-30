@@ -16,15 +16,16 @@ function Technology() {
       </div>
       <div className="content technology-con">
         <div className="btn">
-          <button>
-            <NavLink to="/technology/">1</NavLink>
-          </button>
-          <button>
-            <NavLink to="/technology/port">2</NavLink>
-          </button>
-          <button>
-            <NavLink to="/technology/capsule">3</NavLink>
-          </button>
+          <NavLink to="/technology/">
+            <button>1</button>
+          </NavLink>
+
+          <NavLink to="/technology/port">
+            <button>2</button>
+          </NavLink>
+          <NavLink to="/technology/capsule">
+            <button>3</button>
+          </NavLink>
         </div>
         <Routes>
           <Route path="/" element={<Vehicle />} />

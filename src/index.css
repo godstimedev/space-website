@@ -297,7 +297,7 @@ h5 > span {
   gap: 2rem;
 }
 
-.btn > button {
+.btn > a > button {
   padding: 1rem 1.5rem;
   border-radius: 50%;
   background: transparent;
@@ -313,7 +313,7 @@ h5 > span {
   color: #ffffff;
   cursor: pointer;
 }
-.btn > button:hover {
+.btn > a > button:hover {
   background: #fff;
   border: none;
   color: #0b0d17;
