@@ -1,13 +1,320 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow Condensed";
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* general styles  */
+
+ul > li > a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  cursor: pointer;
+}
+ul > li > a > span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+
+h5 {
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 4.725px;
+  color: #d0d6f9;
+}
+h1 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 132px;
+  line-height: 170px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+h2 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 100px;
+  line-height: 115px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+h3 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 58px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+h4 {
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 37px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+h6 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  color: #d0d6f9;
+}
+a {
+  text-decoration: none;
+}
+ul > li > a:hover {
+  border-bottom: 3px solid rgba(255, 255, 255, 0.5);
+  /* padding-bottom: 2rem; */
+}
+.active {
+  border-bottom: 3px solid #fff;
+  /* padding-bottom: 2rem; */
+  transition: ease-in;
+  transition-duration: 200ms;
+}
+
+/* nav  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+}
+header > img {
+  margin-left: 2rem;
+}
+
+header > .nav-line {
+  border-bottom: 1px solid #fff;
+  width: 480px;
+  margin-left: 4.4rem;
+  /* z-index: 10; */
+}
+
+header > .nav {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+  padding: 2rem 8rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 2rem;
+}
+nav > ul > li > a {
+  padding-bottom: 2rem;
+}
+.info > ul > li > a {
+  padding-bottom: 1rem;
+}
+
+.destination-con > .info > ul {
+  justify-content: start;
+  margin-bottom: 1.5rem;
+  /* gap: 2rem; */
+}
+
+/* home  */
+.container {
+  height: 100vh;
+
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.home {
+  background-image: url(./assets/home/background-home-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  gap: 10rem;
+}
+.content {
+  /* position: relative; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+}
+.content > .info {
+  width: 385px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 0.5rem; */
+}
+.explore > button {
+  padding: 6rem 3rem;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  color: #0b0d17;
+  cursor: pointer;
+}
+.explore > button:hover {
+  box-shadow: 0 4rem 4rem 0 rgba(255, 255, 255, 0.253);
+}
+
+/* destination  */
+.destination {
+  background: #0b0d17;
+  gap: 3rem;
+}
+/* .destination-con {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10rem;
+} */
+.navigation {
+  padding: 0 10rem;
+}
+h5 > span {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 4.725px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+.dest-info {
+  /* background: #fff; */
+  margin-top: 1rem;
+}
+
+.dest-info > p {
+  padding-bottom: 2rem;
+  border-bottom: 0.5px solid #383b4b;
+}
+.subheading2 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 2.3625px;
+  text-transform: uppercase;
+  color: #d0d6f9;
+}
+.subheading1 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.dest-info > div {
+  margin: 1rem 0;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  gap: 4rem;
+}
+
+/* crew  */
+.crew {
+  background: #0b0d17;
+  gap: 3rem;
+}
+
+.crew-con > .info {
+  justify-content: space-between;
+  gap: 5rem;
+  width: 395px;
+  /* margin-top: 3rem; */
+}
+.crew-det {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.crew-det > h4 {
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+/* technology  */
+.technology {
+  background-image: url(./assets/technology/background-technology-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  gap: 3rem;
+}
+
+.technology-con {
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+.technology-con > .btn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.btn > button {
+  padding: 1rem 1.5rem;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #fff;
+  outline: none;
+  font-family: "Bellefair";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 2px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.btn > button:hover {
+  background: #fff;
+  border: none;
+  color: #0b0d17;
 }
