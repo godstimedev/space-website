@@ -12,22 +12,32 @@ body {
 
 /* general styles  */
 
-ul > li > a {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  color: #ffffff;
-  cursor: pointer;
-}
-ul > li > a > span {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  letter-spacing: 2.7px;
-  color: #ffffff;
+@media screen and (max-width: 720px) {
+  .info > h1 {
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 80px;
+    line-height: 100px;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+  .info > h5 {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 4.725px;
+    color: #d0d6f9;
+  }
+  .info > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    color: #d0d6f9;
+  }
 }
 
 h5 {
@@ -94,6 +104,30 @@ p {
 a {
   text-decoration: none;
 }
+
+ul > li > a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  /* margin-bottom: 1rem; */
+}
+ul > li > a > .numbering {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 2.7px;
+  color: #ffffff;
+}
+
 ul > li > a:hover {
   border-bottom: 3px solid rgba(255, 255, 255, 0.5);
   /* padding-bottom: 2rem; */
@@ -108,6 +142,7 @@ ul > li > .active {
 /* nav  */
 
 header {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,7 +162,9 @@ header > .nav-line {
 header > .nav {
   background: rgba(255, 255, 255, 0.04);
   backdrop-filter: blur(81.5485px);
-  padding: 2rem 8rem;
+  /* padding: 2rem 8rem; */
+  height: 5.5rem;
+  width: 850px;
 }
 
 ul {
@@ -137,15 +174,72 @@ ul {
   align-items: center;
   text-transform: uppercase;
   gap: 2rem;
+  margin: auto;
+  max-width: 450px;
+  padding-top: 2rem;
 }
 nav > ul > li > a {
-  padding-bottom: 2rem;
+  padding-bottom: 2.2rem;
+}
+.block {
+  display: block;
+}
+.none {
+  display: none;
+}
+.menu {
+  display: none;
+}
+.menu {
+  margin-right: 2rem;
+}
+.nav-menu {
+  position: absolute;
+  width: 60%;
+  height: 100vh;
+  right: 0;
+  top: 0px;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(81.5485px);
+}
+.nav-menu > .close {
+  position: absolute;
+  right: 2rem;
+  top: 46px;
+}
+.nav-menu > ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 5rem;
+  padding: 2rem 2rem;
+}
+
+/* responsive nav  */
+
+@media screen and (max-width: 1024px) {
+  header > .nav {
+    /* padding: 2rem 2rem; */
+    height: 5.5rem;
+    width: 550px;
+  }
+  header > .nav-line {
+    display: none;
+  }
+}
+@media screen and (max-width: 720px) {
+  header > .nav {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
 }
 
 /* home  */
 .container {
   height: 100vh;
-
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -188,10 +282,57 @@ nav > ul > li > a {
   box-shadow: 0 4rem 4rem 0 rgba(255, 255, 255, 0.253);
 }
 
+/* responsive home  */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    min-height: 100vh;
+  }
+  .home {
+    background-image: url(./assets/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 4rem;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    /* padding: 0 10rem; */
+  }
+  .content > .info {
+    width: 400px;
+    padding: auto 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 720px) {
+  .home {
+    background-image: url(./assets/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 4rem;
+  }
+  .content > .info {
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* gap: 0.5rem; */
+  }
+}
+
 /* destination  */
 .destination {
   background: #0b0d17;
-  gap: 3rem;
+  gap: 2rem;
 }
 .destination-con {
   display: flex;
@@ -271,7 +412,7 @@ h5 > span {
 /* crew  */
 .crew {
   background: #0b0d17;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .crew-con > .info {
@@ -297,7 +438,7 @@ h5 > span {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .technology-con {

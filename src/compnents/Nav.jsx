@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Logo from "../assets/logo.svg";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 function Nav() {
+  const [nav, setNav] = useState(false);
+
+  const handleNav = () => {
+    setNav(!nav);
+  };
   return (
     <header>
       <img src={Logo} alt="/" />
@@ -11,7 +17,7 @@ function Nav() {
         <ul>
           <li>
             <NavLink to="/">
-              <span>00</span> Home
+              <span className="numbering">00</span> <span>Home</span>
             </NavLink>
           </li>
           <li>
@@ -31,6 +37,34 @@ function Nav() {
           </li>
         </ul>
       </nav>
+      <div onClick={handleNav} className="menu">
+        <AiOutlineMenu size={30} />
+      </div>
+      <div className={nav ? "block nav-menu" : "none"}>
+        <AiOutlineClose size={30} onClick={handleNav} className="close" />
+        <ul>
+          <li>
+            <NavLink to="/">
+              <span className="numbering">00</span> <span>Home</span>
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/destination">
+              <span>01</span> Destination
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/crew">
+              <span>02</span> Crew
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/technology">
+              <span>03</span> Technology
+            </NavLink>
+          </li>
+        </ul>
+      </div>
     </header>
   );
 }
