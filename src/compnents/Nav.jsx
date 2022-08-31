@@ -22,17 +22,17 @@ function Nav() {
           </li>
           <li>
             <NavLink to="/destination">
-              <span>01</span> Destination
+              <span className="numbering">01</span> Destination
             </NavLink>
           </li>
           <li>
             <NavLink to="/crew">
-              <span>02</span> Crew
+              <span className="numbering">02</span> Crew
             </NavLink>
           </li>
           <li>
             <NavLink to="/technology">
-              <span>03</span> Technology
+              <span className="numbering">03</span> Technology
             </NavLink>
           </li>
         </ul>
@@ -50,17 +50,17 @@ function Nav() {
           </li>
           <li>
             <NavLink to="/destination">
-              <span>01</span> Destination
+              <span className="numbering">01</span> Destination
             </NavLink>
           </li>
           <li>
             <NavLink to="/crew">
-              <span>02</span> Crew
+              <span className="numbering">02</span> Crew
             </NavLink>
           </li>
           <li>
             <NavLink to="/technology">
-              <span>03</span> Technology
+              <span className="numbering">03</span> Technology
             </NavLink>
           </li>
         </ul>
