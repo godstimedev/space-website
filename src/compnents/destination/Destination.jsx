@@ -16,29 +16,26 @@ function Destination() {
         </h5>
       </div>
       <div className="content destination-con">
-        <div className="left"></div>
-        <div className="info">
-          <ul>
-            <li>
-              <NavLink to="/destination/">Moon</NavLink>
-            </li>
-            <li>
-              <NavLink to="/destination/mars">Mars</NavLink>
-            </li>
-            <li>
-              <NavLink to="/destination/europa">Europa</NavLink>
-            </li>
-            <li>
-              <NavLink to="/destination/titan">Titan</NavLink>
-            </li>
-          </ul>
-          <Routes>
-            <Route path="/" element={<Moon />} />
-            <Route path="mars" element={<Mars />} />
-            <Route path="europa" element={<Europa />} />
-            <Route path="titan" element={<Titan />} />
-          </Routes>
-        </div>
+        <ul>
+          <li>
+            <NavLink to="/destination/">Moon</NavLink>
+          </li>
+          <li>
+            <NavLink to="/destination/mars">Mars</NavLink>
+          </li>
+          <li>
+            <NavLink to="/destination/europa">Europa</NavLink>
+          </li>
+          <li>
+            <NavLink to="/destination/titan">Titan</NavLink>
+          </li>
+        </ul>
+        <Routes>
+          <Route path="/" element={<Moon />} />
+          <Route path="mars" element={<Mars />} />
+          <Route path="europa" element={<Europa />} />
+          <Route path="titan" element={<Titan />} />
+        </Routes>
       </div>
     </div>
   );

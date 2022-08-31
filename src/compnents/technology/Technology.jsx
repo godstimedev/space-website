@@ -28,7 +28,7 @@ function Technology() {
           </NavLink>
         </div>
         <Routes>
-          <Route path="/" element={<Vehicle />} />
+          <Route path="" element={<Vehicle />} />
           <Route path="port" element={<Port />} />
           <Route path="capsule" element={<Capsule />} />
         </Routes>
