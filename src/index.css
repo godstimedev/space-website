@@ -583,17 +583,19 @@ h5 > span {
     justify-content: space-between;
     align-items: center;
     gap: 10rem;
-    margin: 4rem 0;
+    margin: 4rem auto;
+    width: 100%;
   }
   .img {
-    justify-self: center;
+    /* margin: auto; */
     margin-right: 0rem !important;
-    max-width: auto;
   }
   .img > img {
     height: 410px;
-    width: 1240px;
+    max-width: 455px;
+    margin: auto;
   }
+
   .tech-det {
     display: flex;
     flex-direction: column;
@@ -605,9 +607,21 @@ h5 > span {
 }
 
 @media screen and (max-width: 720px) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 2rem;
+  }
+
   .technology > .navigation {
     padding: 0;
     text-align: center;
+  }
+
+  .img > img {
+    max-width: 100%;
   }
   .tech-det {
     display: flex;
@@ -616,7 +630,7 @@ h5 > span {
     gap: 1.5rem;
     text-align: center;
     width: 100%;
-    padding: 0 1rem;
+    padding: 0 2rem;
   }
 }
 
@@ -670,5 +684,5 @@ h5 > span {
 }
 .img > img {
   height: 410px;
-  width: 455px;
+  max-width: 455px;
 }
