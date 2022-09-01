@@ -50,8 +50,17 @@ body {
     text-transform: uppercase;
     color: #ffffff;
   }
-  .tech-det,
+
   .crew-det > h3 {
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+  .tech-det > h3 {
     font-family: "Bellefair";
     font-style: normal;
     font-weight: 400;
@@ -689,10 +698,7 @@ h5 > span {
   }
 
   .tech-det {
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
     text-align: center;
     width: 500px;
   }
@@ -715,14 +721,9 @@ h5 > span {
   .img > img {
     max-width: 100%;
   }
+
   .tech-det {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-    text-align: center;
-    width: 100%;
-    padding: 0 2rem;
+    width: 400px;
   }
 }
 
