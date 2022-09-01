@@ -11,14 +11,13 @@ import ImgFour from "../assets/crew/image-anousheh-ansari.png";
 const Card = ({ name, title, about, image }) => {
   return (
     <div className="content crew-con">
-      <div className="info">
-        {/* <div className="right"></div> */}
-        <div className="crew-det">
-          <h4>{title}</h4>
-          <h3>{name}</h3>
-          <p>{about}</p>
-        </div>
+      {/* <div className="right"></div> */}
+      <div className="crew-det">
+        <h4>{title}</h4>
+        <h3>{name}</h3>
+        <p>{about}</p>
       </div>
+      <hr className="crew-line" />
       <div className="crew-img">
         <img src={image} alt="/" />
       </div>
