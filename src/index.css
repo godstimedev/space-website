@@ -723,7 +723,11 @@ h5 > span {
   }
 
   .tech-det {
-    width: 400px;
+    max-width: 350px;
+    /* padding: auto 5rem; */
+  }
+  .tech-det > h6 {
+    width: 100%;
   }
 }
 
