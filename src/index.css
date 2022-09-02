@@ -599,7 +599,7 @@ h5 > span {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 8rem !important;
     margin: 2rem auto;
   }
   .crew-det {
@@ -629,7 +629,7 @@ h5 > span {
     flex-direction: column-reverse;
     justify-content: space-between;
     align-items: center;
-    gap: 8rem;
+    gap: 8rem !important;
     margin: 2rem auto;
   }
   .crew-det > p {
