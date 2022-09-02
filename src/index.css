@@ -399,7 +399,7 @@ nav > ul > li > a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 6rem !important;
+    gap: 3rem !important;
     padding: 0 2rem;
     /* padding: 0 10rem; */
   }
