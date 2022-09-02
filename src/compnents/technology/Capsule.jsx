@@ -1,5 +1,6 @@
 import React from "react";
-import Img from "../../assets/technology/image-space-capsule-portrait.jpg";
+import Img1 from "../../assets/technology/image-space-capsule-portrait.jpg";
+import Img2 from "../../assets/technology/image-space-capsule-landscape.jpg";
 
 function Capsule() {
   return (
@@ -16,7 +17,8 @@ function Capsule() {
         </p>
       </div>
       <div className="img">
-        <img src={Img} alt="/" />
+        <img src={Img1} alt="/" className="img1" />
+        <img src={Img2} alt="/" className="img2" />
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Bg from "../assets/home/background-home-desktop.jpg";
+// import Bg from "../assets/home/background-home-desktop.jpg";
 import Nav from "./Nav";
 
 function Home() {
@@ -18,6 +18,7 @@ function Home() {
           </p>
         </div>
         <div className="explore">
+          <div className="hover"></div>
           <button>EXPLORE</button>
         </div>
       </div>

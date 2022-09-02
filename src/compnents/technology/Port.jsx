@@ -1,5 +1,6 @@
 import React from "react";
-import Img from "../../assets/technology/image-spaceport-portrait.jpg";
+import Img1 from "../../assets/technology/image-spaceport-portrait.jpg";
+import Img2 from "../../assets/technology/image-spaceport-landscape.jpg";
 
 function Port() {
   return (
@@ -15,7 +16,8 @@ function Port() {
         </p>
       </div>
       <div className="img">
-        <img src={Img} alt="/" />
+        <img src={Img1} alt="/" className="img1" />
+        <img src={Img2} alt="/" className="img2" />
       </div>
     </div>
   );

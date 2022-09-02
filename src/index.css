@@ -314,7 +314,28 @@ nav > ul > li > a {
   flex-direction: column;
   /* gap: 0.5rem; */
 }
+.explore {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  /* display: hidden; */
+}
+.explore > .hover {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  display: none;
+}
 .explore > button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 6rem 3rem;
   border-radius: 50%;
   border: none;
@@ -327,9 +348,11 @@ nav > ul > li > a {
   letter-spacing: 2px;
   color: #0b0d17;
   cursor: pointer;
+  opacity: 1 !important;
+  /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
-.explore > button:hover {
-  box-shadow: 0 4rem 4rem 0 rgba(255, 255, 255, 0.253);
+.explore:hover .hover {
+  display: block;
 }
 
 /* responsive home  */
@@ -350,7 +373,7 @@ nav > ul > li > a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 4rem !important;
     padding: 0 5rem;
     /* padding: 0 10rem; */
   }
@@ -376,7 +399,7 @@ nav > ul > li > a {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    gap: 6rem !important;
     padding: 0 2rem;
     /* padding: 0 10rem; */
   }
@@ -650,87 +673,6 @@ h5 > span {
   /* margin-top: 2rem; */
 }
 
-@media screen and (max-width: 1024px) {
-  .technology {
-    background-image: url(./assets/technology/background-technology-tablet.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    gap: 2rem;
-  }
-  .technology > .navigation {
-    padding: 0 2rem;
-  }
-
-  .technology-con {
-    position: relative;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: space-between; */
-    gap: 5rem;
-    /* margin-top: 2rem; */
-  }
-  .technology-con > .btn {
-    position: absolute;
-    top: 525px;
-    display: flex !important;
-    flex-direction: row !important;
-    gap: 1rem !important;
-    max-width: auto;
-  }
-  .tech-info {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10rem;
-    margin: 4rem auto;
-    width: 100%;
-  }
-  .img {
-    /* margin: auto; */
-    margin-right: 0rem !important;
-  }
-  .img > img {
-    height: 410px;
-    max-width: 455px;
-    margin: auto;
-  }
-
-  .tech-det {
-    align-items: center;
-    text-align: center;
-    width: 500px;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .technology {
-    background-image: url(./assets/technology/background-technology-mobile.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    gap: 2rem;
-  }
-
-  .technology > .navigation {
-    padding: 0;
-    text-align: center;
-  }
-
-  .img > img {
-    max-width: 100%;
-  }
-
-  .tech-det {
-    max-width: 350px;
-    /* padding: auto 5rem; */
-  }
-  .tech-det > h6 {
-    width: 100%;
-  }
-}
-
 .technology-con > .btn {
   display: flex;
   flex-direction: column;
@@ -777,9 +719,133 @@ h5 > span {
 }
 .img {
   justify-self: flex-end;
-  margin-right: -10rem;
 }
-.img > img {
+.img > .img1 {
   height: 410px;
   max-width: 455px;
+  margin-right: -10rem;
+}
+.img > .img2 {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 2rem;
+    min-height: 100vh;
+  }
+  .technology > .navigation {
+    padding: 0 2rem;
+  }
+
+  .technology-con {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-between; */
+    gap: 5rem;
+    /* margin-top: 2rem; */
+  }
+  .technology-con > .btn {
+    position: absolute;
+    top: 490px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    max-width: auto;
+  }
+  .tech-info {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10rem;
+    margin: 4rem auto;
+    width: 100%;
+  }
+  .img {
+    /* margin: auto; */
+    /* margin-right: auto !important;
+    margin-left: auto !important; */
+    max-width: 100vw;
+    padding: 0;
+  }
+  .img > .img1 {
+    /* height: 410px;
+    max-width: 455px;
+    margin: auto; */
+    display: none;
+  }
+  .img > .img2 {
+    display: block;
+    width: 100vw;
+    margin: 0;
+
+    /* height: 100%; */
+  }
+
+  .tech-det {
+    align-items: center;
+    text-align: center;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    gap: 2rem;
+  }
+
+  .technology > .navigation {
+    padding: 0;
+    text-align: center;
+  }
+  .technology-con > .btn {
+    position: absolute;
+    top: 360px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    max-width: auto;
+  }
+  .img > .img1 {
+    max-width: 100%;
+  }
+
+  .tech-det {
+    max-width: 350px;
+    /* padding: auto 5rem; */
+  }
+  .tech-det > h6 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .technology-con > .btn {
+    position: absolute;
+    top: 300px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    max-width: auto;
+  }
+}
+@media screen and (max-width: 380px) {
+  .technology-con > .btn {
+    position: absolute;
+    top: 280px;
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 1rem !important;
+    max-width: auto;
+  }
 }

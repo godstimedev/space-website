@@ -1,5 +1,6 @@
 import React from "react";
 import Img from "../../assets/technology/image-launch-vehicle-portrait.jpg";
+import Img2 from "../../assets/technology/image-launch-vehicle-landscape.jpg";
 
 function Vehicle() {
   return (
@@ -16,7 +17,8 @@ function Vehicle() {
         </p>
       </div>
       <div className="img">
-        <img src={Img} alt="/" />
+        <img src={Img} alt="/" className="img1" />
+        <img src={Img2} alt="/" className="img2" />
       </div>
     </div>
   );
