@@ -49,7 +49,7 @@ function Nav() {
             </NavLink>
           </li>
           <li>
-            <NavLink to="/destination">
+            <NavLink to="/destination/moon">
               <span className="numbering">01</span> Destination
             </NavLink>
           </li>

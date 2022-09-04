@@ -414,7 +414,11 @@ nav > ul > li > a {
 
 /* destination  */
 .destination {
-  background: #0b0d17;
+  /* background: #0b0d17; */
+  background-image: url(./assets/destination/background-destination-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   gap: 2rem;
   /* position: relative; */
 }
@@ -495,6 +499,12 @@ h5 > span {
 }
 
 @media screen and (max-width: 1024px) {
+  .destination {
+    background-image: url(./assets/destination/background-destination-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
   .destination-con {
     position: relative;
   }
@@ -536,6 +546,12 @@ h5 > span {
   }
 }
 @media screen and (max-width: 720px) {
+  .destination {
+    background-image: url(./assets/destination/background-destination-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
   .destination > .navigation {
     padding: 0;
     text-align: center;
@@ -553,7 +569,11 @@ h5 > span {
 
 /* crew  */
 .crew {
-  background: #0b0d17;
+  /* background: #0b0d17; */
+  background-image: url(./assets/crew/background-crew-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   gap: 2rem;
 }
 
@@ -590,6 +610,10 @@ h5 > span {
 
 @media screen and (max-width: 1024px) {
   .crew {
+    background-image: url(./assets/crew/background-crew-tablet.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     min-height: 100vh;
   }
   .crew > .navigation {
@@ -621,6 +645,12 @@ h5 > span {
   }
 }
 @media screen and (max-width: 720px) {
+  .crew {
+    background-image: url(./assets/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
   .crew > .navigation {
     padding: 0;
     text-align: center;

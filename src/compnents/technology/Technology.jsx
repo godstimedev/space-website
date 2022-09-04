@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, Route, Routes } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import Nav from "../Nav";
 import Capsule from "./Capsule";
 import Port from "./Port";
@@ -16,7 +16,7 @@ function Technology() {
       </div>
       <div className="content technology-con">
         <div className="btn">
-          <NavLink to="/technology/">
+          <NavLink to="/technology/vehicle">
             <button>1</button>
           </NavLink>
 
@@ -27,11 +27,7 @@ function Technology() {
             <button>3</button>
           </NavLink>
         </div>
-        <Routes>
-          <Route path="" element={<Vehicle />} />
-          <Route path="port" element={<Port />} />
-          <Route path="capsule" element={<Capsule />} />
-        </Routes>
+        <Outlet />
       </div>
     </div>
   );
